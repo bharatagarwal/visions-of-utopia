@@ -19,7 +19,7 @@ A hierarchical, multi-tool pipeline is best:
 2. Use SpaCy Locally: Within each chapter, use SpaCy for robust sentence segmentation and its built-in vectors to perform a fast, free, local semantic chunking process, grouping related sentences into coherent paragraphs.
 3. Final Cloud Embeddings: Generate the final, high-quality storage embeddings for these completed chunks using OpenAI's API.
 
-### Technology Stack
+## Technology Stack
 
 - Data Ingestion: Python, SpaCy, Regex, OpenAI Embedding API.
 - Database: A local PostgreSQL instance with the `pgvector` extension.
@@ -27,14 +27,14 @@ A hierarchical, multi-tool pipeline is best:
 - Application Frontend: Streamlit is the recommended choice for its balance of rapid development and a professional, customizable UI.
 - Synthesis LLM: GPT-4.1-Turbo (or a similar frontier model) via OpenAI's API is non-negotiable for achieving the high-quality synthesis and citation required by the vision.
 
-### Hardware Strategy (M1 Air 8GB)
+## Hardware Strategy (M1 Air 8GB)
 
 A hybrid model is necessary for your M1 Air 8GB:
 
 - Local Machine: Handles all data ingestion, the Postgres database, running the Streamlit app, and the cron job for image generation.
 - Cloud APIs: Used for the one-time embedding of chunks and the real-time generation of the final synthesis.
 
-### Image Gallery
+## Image Gallery
 
 A nightly cron job on your local machine using MLX and the SDXL-Turbo model will generate "visions of utopia" and save them to a gallery folder, providing a unique and engaging visual element for your app.
 

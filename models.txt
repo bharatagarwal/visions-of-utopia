@@ -1,0 +1,6 @@
+bge-m3: 1024 dimensions
+mxbai-embed-large: 1024 dimensions
+nomic-embed-text: 768 dimensions
+text-embedding-3-small: 1536 dimensions -- 0.01/1m tokens
+text-embedding-3-large: 3072 dimensions -- 0.065/1m tokens
+gemini-embedding-001: 3072-dimensions -- 0.15/1m tokens -- or free

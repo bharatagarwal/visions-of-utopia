@@ -1,1 +1,4 @@
 ipdb
+spacy
+psycopg2
+dotenv

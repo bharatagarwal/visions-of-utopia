@@ -1,7 +1,5 @@
-title = """ A CRYSTAL AGE
-
-BY W. H. HUDSON
-"""
+title = "A Crystal Age"
+author = "W. H. Hudson"
 
 preface = """ _Romances of the future, however fantastic they may be, have for most of us a perennial if mild interest, since they are born of a very common feeling--a sense of dissatisfaction with the existing order of things, combined with a vague faith in or hope of a better one to come. The picture put before us is false; we knew it would be false before looking at it, since we cannot imagine what is unknown any more than we can build without materials. Our mental atmosphere surrounds and shuts us in like our own skins; no one can boast that he has broken out of that prison. The vast, unbounded prospect lies before us, but, as the poet mournfully adds, "clouds and darkness rest upon it." Nevertheless we cannot suppress all curiosity, or help asking one another, What is your dream--your ideal? What is your News from Nowhere, or, rather, what is the result of the little shake your hand has given to the old pasteboard toy with a dozen bits of colored glass for contents? And, most important of all, can you present it in a narrative or romance which will enable me to pass an idle hour not disagreeably? How, for instance, does it compare in this respect with other prophetic books on the shelf?_
 

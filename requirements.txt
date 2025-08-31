@@ -3,3 +3,5 @@ spacy
 python-dotenv
 ipython
 ipdb
+streamlit
+watchdog

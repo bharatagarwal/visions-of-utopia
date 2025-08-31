@@ -22,3 +22,7 @@ lint:
 lint-fix:
 	@echo "Fixing linting issues..."
 	ruff check --fix .
+
+ci:
+	ruff format .
+	ruff check --fix .

@@ -11,17 +11,20 @@ class ConfigController:
         if "max_len" not in st.session_state:
             st.session_state.max_len = 500
 
-    def sync_widget_state(self, parameter_key):
-        slider_key = f"{parameter_key}_slider"
+    def sync_slider_to_input(self, parameter_key):
+        """Sync slider value when input changes"""
         input_key = f"{parameter_key}_input"
+        if input_key in st.session_state:
+            st.session_state[parameter_key] = st.session_state[
+                input_key
+            ]
 
+    def sync_input_to_slider(self, parameter_key):
+        """Sync input value when slider changes"""
+        slider_key = f"{parameter_key}_slider"
         if slider_key in st.session_state:
             st.session_state[parameter_key] = st.session_state[
                 slider_key
-            ]
-        elif input_key in st.session_state:
-            st.session_state[parameter_key] = st.session_state[
-                input_key
             ]
 
     def create_parameter_widget(
@@ -47,7 +50,7 @@ class ConfigController:
                 step=step,
                 key=f"{parameter_key}_slider",
                 label_visibility="collapsed",
-                on_change=self.sync_widget_state,
+                on_change=self.sync_input_to_slider,
                 args=(parameter_key,),
             )
         with col2:
@@ -60,7 +63,7 @@ class ConfigController:
                 format=format_str,
                 key=f"{parameter_key}_input",
                 label_visibility="collapsed",
-                on_change=self.sync_widget_state,
+                on_change=self.sync_slider_to_input,
                 args=(parameter_key,),
             )
 

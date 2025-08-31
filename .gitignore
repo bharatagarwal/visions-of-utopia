@@ -6,3 +6,4 @@ venv
 *.key
 .zed
 utils
+.idea

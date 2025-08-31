@@ -43,7 +43,7 @@ Key Technologies: Python, Regex, SpaCy, OpenAI API, PostgreSQL (`pgvector`), `ps
         ```
       utopian_synthesizer/
       ├── txt/
-      │   ├── a-crystal-age.txt
+      │   ├── a_crystal_age.txt
       │   └── ... (all 10 .txt files)
       ├── ingest.py
       └── .env

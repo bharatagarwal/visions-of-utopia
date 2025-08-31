@@ -1,5 +1,5 @@
-from ui_components import ConfigController
 import streamlit as st
+from ui_components import ConfigController
 
 st.set_page_config(
     page_title="Chunking Inspector",

@@ -1,33 +1,37 @@
+from chunker import create_chunking_config
 import streamlit as st
-from chunker import ChunkingConfig
 
 
 class ConfigController:
     def __init__(self):
-        if "similarity_threshold" not in st.session_state:
-            st.session_state.similarity_threshold = 0.88
+        if "threshold" not in st.session_state:
+            st.session_state.threshold = 0.88
         if "min_len" not in st.session_state:
             st.session_state.min_len = 250
         if "max_len" not in st.session_state:
             st.session_state.max_len = 500
 
-    def sync_widget_state(self, parameter_key: str):
+    def sync_widget_state(self, parameter_key):
         slider_key = f"{parameter_key}_slider"
         input_key = f"{parameter_key}_input"
 
         if slider_key in st.session_state:
-            st.session_state[parameter_key] = st.session_state[slider_key]
+            st.session_state[parameter_key] = st.session_state[
+                slider_key
+            ]
         elif input_key in st.session_state:
-            st.session_state[parameter_key] = st.session_state[input_key]
+            st.session_state[parameter_key] = st.session_state[
+                input_key
+            ]
 
     def create_parameter_widget(
         self,
-        label: str,
-        parameter_key: str,
+        label,
+        parameter_key,
         min_value,
         max_value,
         step,
-        format_str: str = "%d",
+        format_str="%d",
     ):
         st.sidebar.write(f"**{label}**")
         col1, col2 = st.sidebar.columns([5, 1])
@@ -64,7 +68,7 @@ class ConfigController:
         st.sidebar.header("2. Tune Algorithm")
         self.create_parameter_widget(
             "Similarity Threshold",
-            "similarity_threshold",
+            "threshold",
             0.70,
             0.99,
             0.01,
@@ -85,9 +89,9 @@ class ConfigController:
             10,
         )
 
-    def get_chunking_config(self) -> ChunkingConfig:
-        return ChunkingConfig(
-            similarity_threshold=st.session_state.similarity_threshold,
-            min_chunk_length=st.session_state.min_len,
-            max_chunk_length=st.session_state.max_len,
+    def get_chunking_config(self):
+        return create_chunking_config(
+            threshold=st.session_state.threshold,
+            min_len=st.session_state.min_len,
+            max_len=st.session_state.max_len,
         )

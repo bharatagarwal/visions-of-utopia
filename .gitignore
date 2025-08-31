@@ -5,3 +5,4 @@ venv
 .env
 *.key
 .zed
+utils

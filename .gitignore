@@ -7,3 +7,4 @@ venv
 .zed
 utils
 .idea
+*.pkl

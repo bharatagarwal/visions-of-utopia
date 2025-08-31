@@ -1,4 +1,5 @@
-ipdb
+psycopg2-binary
 spacy
-psycopg2
-dotenv
+python-dotenv
+ipython
+ipdb
